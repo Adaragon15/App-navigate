@@ -11,8 +11,11 @@
   },
   "dependencies": {
     "app-proyect": "file:",
+    "prop-types": "^15.8.1",
     "react": "^18.3.1",
-    "react-dom": "^18.3.1"
+    "react-data-table-component": "^7.6.2",
+    "react-dom": "^18.3.1",
+    "styled-components": "^6.1.13"
   },
   "devDependencies": {
     "@eslint/js": "^9.11.1",
