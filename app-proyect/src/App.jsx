@@ -1,10 +1,10 @@
-import Personas from './screens/Personas'
+import Routers from "./Routers/Routes"
 
 function App() {
 
   return (
     <>
-      <Personas/>
+      <Routers/>
     </>
   )
 }

@@ -1,4 +1,5 @@
-
+import React from "react"
+import { Link } from "react-router-dom"
 export const Menu=({nombre,usuario})=>{
 
     return(
@@ -21,43 +22,38 @@ export const Menu=({nombre,usuario})=>{
             <ul className="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
               <li className="nav-item">
                 <a href="#" className="nav-link">
-                  <i className="nav-icon fas fa-tachometer-alt" />
-                  <p>
-                    Mobiliario
-                    <i className="right fas fa-angle-left" />
-                  </p>
+                  <i className="nav-icon fas fa-laptop-house" /> 
+                  <Link to="/B" >Mobiliario</Link>
                 </a>
 
               </li>
               <li className="nav-item">
                 <a href="../widgets.html" className="nav-link">
-                  <i className="nav-icon fas fa-th" />
-                  <p>
-                    Personas
-                    <span className="right badge badge-danger">New</span>
-                  </p>
+                  <i className="nav-icon fas fa-users" />
+                  <Link to="/" >Personas</Link>
                 </a>
               </li>
               <li className="nav-item">
                 <a href="#" className="nav-link">
-                  <i className="nav-icon fas fa-copy" />
-                  <p>
-                    Ubicaciones
-                    <i className="fas fa-angle-left right" />
-                    <span className="badge badge-info right">6</span>
-                  </p>
+                  <i className="nav-icon fas fa-map-marker-alt" />   
+                  <Link to="/B" >Ubicaciones</Link>
                 </a>
               </li>
               <li className="nav-item">
-                <a href="#" className="nav-link">
-                  <i className="nav-icon fas fa-copy" />
-                  <p>
-                    Informes
-                    <i className="fas fa-angle-left right" />
-                    <span className="badge badge-info right">6</span>
-                  </p>
+                <a  className="nav-link">
+                  <i className="nav-icon fas fa-info" />
+                  <Link to="/B" >Informes</Link>
                 </a>
               </li>
+
+              <li className="nav-item">
+                <a className="nav-link">
+                  <i className="nav-icon fas fa-qrcode" />  
+                  <Link to="/Generar" >Generar Qr</Link>
+                </a>
+              </li>
+
+
 
 
             </ul>

@@ -5,7 +5,7 @@ const Blanco = ()=>{
     return(
         <>
         <Navbar/>
-        <Menu/>
+        <Menu nombre="InventariosSys" usuario="Ivancito"/>
 
   <div className="content-wrapper" style={{minHeight: '1604.44px'}}>
     <section className="content-header">
