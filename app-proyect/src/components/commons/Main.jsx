@@ -23,7 +23,7 @@ export const Menu=({nombre,usuario})=>{
               <li className="nav-item">
                 <a href="#" className="nav-link">
                   <i className="nav-icon fas fa-laptop-house" /> 
-                  <Link to="/B" >Mobiliario</Link>
+                  <Link to="/Mobiliario" >Mobiliario</Link>
                 </a>
 
               </li>
@@ -36,13 +36,13 @@ export const Menu=({nombre,usuario})=>{
               <li className="nav-item">
                 <a href="#" className="nav-link">
                   <i className="nav-icon fas fa-map-marker-alt" />   
-                  <Link to="/B" >Ubicaciones</Link>
+                  <Link to="/Ubicaciones" >Ubicaciones</Link>
                 </a>
               </li>
               <li className="nav-item">
                 <a  className="nav-link">
                   <i className="nav-icon fas fa-info" />
-                  <Link to="/B" >Informes</Link>
+                  <Link to="/Informes" >Informes</Link>
                 </a>
               </li>
 

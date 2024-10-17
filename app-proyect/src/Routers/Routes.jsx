@@ -3,6 +3,9 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Personas from "../screens/Personas";
 import Generador from "../screens/Qr";
 import Blanco from "../screens/Blanco";
+import Informes from "../screens/Informes";
+import Mobiliario from "../screens/Mobiliario";
+import Ubicaciones from "../screens/Ubicaciones";
 
 const Routers = () => {
     return (
@@ -11,6 +14,10 @@ const Routers = () => {
                 <Route path='/' element={<Personas />} />
                 <Route path='/Generar' element={<Generador />} />
                 <Route path='/B' element={<Blanco />} />
+                <Route path='/Informes' element={<Informes />} />
+                <Route path='/Mobiliario' element={<Mobiliario />} />
+                <Route path='/Ubicaciones' element={<Ubicaciones />} />
+
 
             </Routes>
         </BrowserRouter>
