@@ -85,7 +85,7 @@ const Informes = ()=>{
     return(
         <>
         <Navbar/>
-        <Menu nombre="InventariosSys" usuario="Ivancito"/>
+        <Menu nombre="InventariosUTP" usuario="Ivancito"/>
 
         
 

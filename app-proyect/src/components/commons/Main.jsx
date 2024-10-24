@@ -1,7 +1,7 @@
 import React from "react"
 import { Link } from "react-router-dom"
 import userImg from "../../../public/dist/img/user1-128x128.jpg"
-import stockLogo from "../../../public/dist/img/user3-128x128.jpg"
+import stockLogo from "../../../public/dist/img/logo.png"
 
 export const Menu=({nombre,usuario})=>{
 

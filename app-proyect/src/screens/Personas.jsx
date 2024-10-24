@@ -8,7 +8,7 @@ const Personas = ()=>{
     return(
         <>
         <Navbar/>
-        <Menu nombre="InventariosSys" usuario="Ivancito"/>
+        <Menu nombre="InventariosUTP" usuario="Ivancito"/>
 
   <div className="content-wrapper" >
 <Title title="Personas" breadcrums={["Personas","Menu"]}/>
