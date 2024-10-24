@@ -1,5 +1,79 @@
 import { Menu } from "../components/commons/Main.jsx";
 import {Navbar} from "../components/commons/Navbar";
+import { Footer } from "../components/commons/Footer.jsx";
+import { PieCharts, Title } from "../components/index.js";
+import DataTable from 'react-data-table-component';
+import QRCode from "react-qr-code";
+import { BarCharts } from "../components/echarts/BarsCharts.jsx";
+
+
+const columnas=[
+  {
+    name:'Identificador',
+    selector: row=> row.matricula
+    },
+    {
+        name:'Empleados',
+        selector: row=> row.nombre
+    },
+
+    {
+        name:'Ubicaion',
+        selector: row=> row.tipo
+    },        
+    {
+        name:'tipo',
+        selector: row=> row.ubicacion
+    },
+    {
+      name:'fecha',
+      selector: row=> row.fecha
+  },
+  {
+    name:'Opciones',
+    selector: row=> row.action,
+    cell:(props)=>(
+      <button className="btn btn-info btn-sm" title="Editar Info">
+      <i className="fas fa-pen"></i>
+    </button>        ),
+    ignoreRowClick:true,
+    allowOverflow:true,
+    button:true
+}      
+]
+const data = [
+  {
+    id:1,
+    matricula:"1234",
+    nombre:"Mesa",
+    tipo:"Mesa de madera",
+    ubicacion:"Edificio k4",
+    fecha:"21/10/2024",
+    cell:(props)=>(
+      <button className="btn btn-info btn-sm" title="Editar Info">
+        <i className="fas fa-pen"></i>
+      </button>
+    )
+
+},
+{
+    id:2,
+    matricula:"4321",
+    nombre:"Banco de herreria",
+    tipo:"Fierro",
+    ubicacion:"Edificio d5",
+    fecha:"22/11/2024",
+    cell:(props)=>(
+      <button className="btn btn-info btn-sm" title="Editar Info">
+        <i className="fas fa-pen"></i>
+      </button>
+    )
+
+
+}
+  
+]
+
 
 const Informes = ()=>{
     return(
@@ -7,51 +81,153 @@ const Informes = ()=>{
         <Navbar/>
         <Menu nombre="InventariosSys" usuario="Ivancito"/>
 
-  <div className="content-wrapper" style={{minHeight: '1604.44px'}}>
-    <section className="content-header">
-      <div className="container-fluid">
-        <div className="row mb-2">
-          <div className="col-sm-6">
-            <h1>Informes</h1>
-          </div>
-          <div className="col-sm-6">
-            <ol className="breadcrumb float-sm-right">
-              <li className="breadcrumb-item"><a href="#">Home</a></li>
-              <li className="breadcrumb-item active">Blank Page</li>
-            </ol>
-          </div>
+        
+
+  <div className="content-wrapper" >
+<Title title="Informes" breadcrums={["Informes","Menu"]}/>
+<section className="content">
+
+        <div className="row">
+              <div className="col-4"> 
+                <div className="card-danger"> 
+                  <div className="card-header"><h4 className="card-title">Agregar Mobliario</h4>
+                  </div>
+
+                  <div className="card-body">
+                    <form>
+                    <div className="form-group">
+                        <label>Empleados</label>
+                        <select className="form-control">
+                          <option>Seleccione</option>
+                          <option>-Todos-</option>
+                          <option>Juan Lopez</option>
+                          <option>Laura Sanchez</option>
+                          <option>Otro</option>
+                        </select>
+                      </div>
+
+
+
+                      <div className="form-group">
+                        <label>Ubicacion</label>
+                        <select className="form-control">
+                          <option>Seleccione</option>
+                          <option>Todas</option>
+                          <option>Administracion</option>
+                          <option>Recepcion</option>
+                          <option>Otro</option>
+                        </select>
+                      </div>
+
+                      <div className="form-group">
+                        <label>Tipo de articulo:</label>
+                        <select className="form-control">
+                          <option>Seleccione</option>
+                          <option>Todos tipos</option>
+                          <option>Muebles</option>
+                          <option>Equipos de computo</option>
+                          <option>Equipos de Lab</option>
+                          <option>Articulo de lab</option>
+                          <option>Articulo Gneral</option>
+                          <option>Otro</option>
+                        </select>
+                      </div>
+
+                      <div className="form-group">
+                        <label>Fecha</label>
+                        <input className="form-control" type="date" />
+                      </div>
+
+
+
+
+                    </form>
+                  </div>
+                  <div className="card-footer"><button className="btn btn-secondary">Cancelar</button><button className="btn btn-lg float-right btn-primary" data-toggle="modal"
+                  data-target="#modal-default">Aceptar</button></div>
+                    </div>
+              </div> 
+
+              <div className="col-8">
+                  <div className="card card-success">
+                    <div className="card-header">
+                        <h4 className="card-title">Mobiliario</h4>
+                    </div>
+                  <div className="card-body">
+                  <DataTable columns={columnas} data={data}/>
+                  </div>
+                </div>
+              </div>
+              <div className="col-8">
+                 <div className="row">
+                    <div className="col-12">
+                      <div className="card-primary">
+                          <div className="card-header">
+                            <h4 className="card-title">Resultados</h4>
+                          </div>
+                        <div className="card-body">
+                          <PieCharts/>
+                        </div>
+                      </div>
+                    </div>
+               </div>
+             </div>
+
+             <div className="col-8">
+                 <div className="row">
+                    <div className="col-12">
+                      <div className="card-primary">
+                          <div className="card-header">
+                            <h4 className="card-title">Resultados</h4>
+                          </div>
+                        <div className="card-body"><BarCharts/></div>
+                      </div>
+                    </div>
+               </div>
+             </div>
+
+             <div className="col-8">
+                 <div className="row">
+                    <div className="col-12">
+                      <div className="card-primary">
+                          <div className="card-header">
+                            <h4 className="card-title">Resultados</h4>
+                          </div>
+                        <div className="card-body"></div>
+                      </div>
+                    </div>
+               </div>
+             </div>
+              
+             
         </div>
-      </div>
-    </section>
-    <section className="content">
-      <div className="card">
-        <div className="card-header">
-          <h3 className="card-title">Title</h3>
-          <div className="card-tools">
-            <button type="button" className="btn btn-tool" data-card-widget="collapse" title="Collapse">
-              <i className="fas fa-minus" />
-            </button>
-            <button type="button" className="btn btn-tool" data-card-widget="remove" title="Remove">
-              <i className="fas fa-times" />
-            </button>
-          </div>
-        </div>
-        <div className="card-body">
-          Start creating your amazing application!
-        </div>
-        <div className="card-footer">
-          Footer
-        </div>
-      </div>
-    </section>
+</section>
+
   </div>
 
-  <footer className="main-footer">
-    <div className="float-right d-none d-sm-block">
-      <b>Version</b> 3.2.0
+  <Footer/>
+
+
+  <div className="modal fade" id="modal-default">
+      <div className="modal-dialog">
+        <div className="modal-content">
+          <div className="modal-header">
+              <h4 className="modal-title">Default Modal</h4>
+              <button type="button" className="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">×</span>
+              </button>
+          </div>
+          <div className="modal-body">
+            <QRCode value="Este es mi coigo qr"/>
+          </div>
+          <div className="modal-footer justify-content-between">
+              <button type="button" className="btn btn-default" data-dismiss="modal">Cerrar</button>
+              <button type="button" className="btn btn-primary">Guardar Cambios</button>
+          </div>
+        </div>
+      </div>
     </div>
-    <strong>Copyright © 2014-2021 <a href="https://adminlte.io">AdminLTE.io</a>.</strong> All rights reserved.
-  </footer>
+
         </>
     )
 }

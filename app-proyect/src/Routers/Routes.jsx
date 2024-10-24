@@ -17,6 +17,11 @@ const Routers = () => {
                 <Route path='/Informes' element={<Informes />} />
                 <Route path='/Mobiliario' element={<Mobiliario />} />
                 <Route path='/Ubicaciones' element={<Ubicaciones />} />
+                {/* <Route path="menu" element={<Menu/>}/> */}
+                {/* <Route index element={<Index/>}/> */}
+
+                
+                
 
 
             </Routes>

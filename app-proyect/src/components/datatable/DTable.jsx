@@ -39,6 +39,17 @@ DTable.defaultProps={
             name:'Correo',
             selector: row=> row.correo
         },
+        {
+            name:'Opciones',
+            selector: row=> row.action,
+            cell:(props)=>(
+              <button className="btn btn-info btn-sm" title="Editar Personas">
+              <i className="fas fa-pen"></i>
+            </button>        ),
+            ignoreRowClick:true,
+            allowOverflow:true,
+            button:true
+        }       
     ],
     info:[
         {
@@ -48,7 +59,12 @@ DTable.defaultProps={
             paterno:"Pascal",
             materno:"Martinez",
             telefono:"111111111",
-            correo:"pascalpedro@gmail.com"
+            correo:"pascalpedro@gmail.com",
+            cell:(props)=>(
+                <button className="btn btn-info btn-sm" title="Editar Personas">
+                  <i className="fas fa-pen"></i>
+                </button>
+              )
         },
         {
             id:2,
@@ -57,7 +73,12 @@ DTable.defaultProps={
             paterno:"De",
             materno:"Armas",
             telefono:"2222222",
-            correo:"anaDeArmas5@gmail.com"
+            correo:"anaDeArmas5@gmail.com",
+            cell:(props)=>(
+                <button className="btn btn-info btn-sm" title="Editar Personas">
+                  <i className="fas fa-pen"></i>
+                </button>
+              )
         }
     ]
 

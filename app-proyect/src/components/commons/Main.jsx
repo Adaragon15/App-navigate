@@ -1,17 +1,20 @@
 import React from "react"
 import { Link } from "react-router-dom"
+import userImg from "../../../public/dist/img/user1-128x128.jpg"
+import stockLogo from "../../../public/dist/img/user3-128x128.jpg"
+
 export const Menu=({nombre,usuario})=>{
 
     return(
         <aside className="main-sidebar sidebar-dark-primary elevation-4">
         <a href="../../index3.html" className="brand-link">
-          <img src="../../dist/img/AdminLTELogo.png" alt="AdminLTE Logo" className="brand-image img-circle elevation-3" style={{opacity: '.8'}} />
+          <img src={stockLogo} alt="Logo de la Aplication" className="brand-image img-circle elevation-3" style={{opacity: '.8'}} />
           <span className="brand-text font-weight-light">{nombre}</span>
         </a>
         <div className="sidebar">
           <div className="user-panel mt-3 pb-3 mb-3 d-flex">
             <div className="image">
-              <img src="../../dist/img/user2-160x160.jpg" className="img-circle elevation-2" alt="User Image" />
+              <img src={userImg}className="img-circle elevation-2" alt="User Image" />
             </div>
             <div className="info">
               <a href="#" className="d-block">{usuario}</a>
@@ -21,20 +24,20 @@ export const Menu=({nombre,usuario})=>{
           <nav className="mt-2">
             <ul className="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
               <li className="nav-item">
-                <a href="#" className="nav-link">
+                <a className="nav-link">
                   <i className="nav-icon fas fa-laptop-house" /> 
                   <Link to="/Mobiliario" >Mobiliario</Link>
                 </a>
 
               </li>
               <li className="nav-item">
-                <a href="../widgets.html" className="nav-link">
+                <a className="nav-link">
                   <i className="nav-icon fas fa-users" />
                   <Link to="/" >Personas</Link>
                 </a>
               </li>
               <li className="nav-item">
-                <a href="#" className="nav-link">
+                <a  className="nav-link">
                   <i className="nav-icon fas fa-map-marker-alt" />   
                   <Link to="/Ubicaciones" >Ubicaciones</Link>
                 </a>
