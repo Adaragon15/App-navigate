@@ -5,6 +5,7 @@ import { PieCharts, Title } from "../components/index.js";
 import DataTable from 'react-data-table-component';
 import QRCode from "react-qr-code";
 import { BarCharts } from "../components/echarts/BarsCharts.jsx";
+import { LineCharts } from "../components/echarts/LineCharts.jsx";
 
 
 const columnas=[
@@ -33,9 +34,14 @@ const columnas=[
     name:'Opciones',
     selector: row=> row.action,
     cell:(props)=>(
-      <button className="btn btn-info btn-sm" title="Editar Info">
-      <i className="fas fa-pen"></i>
-    </button>        ),
+      <div>
+      <button className="btn btn-info btn-sm" title="Editar" style={{ marginRight: '5px' }}>
+        <i className="fas fa-pen"></i>
+      </button>
+      <button className="btn btn-danger btn-sm" title="Eliminar" style={{ marginRight: '5px' }}>
+        <i className="fas fa-trash"></i>
+      </button>
+    </div>       ),
     ignoreRowClick:true,
     allowOverflow:true,
     button:true
@@ -156,6 +162,8 @@ const Informes = ()=>{
                   <div className="card-body">
                   <DataTable columns={columnas} data={data}/>
                   </div>
+                  <div className="card-footer"><button className="btn btn-lg float-right btn-success" data-toggle="modal"
+                  data-target="#modal-default">+ Agregar Nuevo</button></div>
                 </div>
               </div>
               <div className="col-8">
@@ -193,7 +201,7 @@ const Informes = ()=>{
                           <div className="card-header">
                             <h4 className="card-title">Resultados</h4>
                           </div>
-                        <div className="card-body"></div>
+                        <div className="card-body"><LineCharts/></div>
                       </div>
                     </div>
                </div>

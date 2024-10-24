@@ -43,9 +43,14 @@ DTable.defaultProps={
             name:'Opciones',
             selector: row=> row.action,
             cell:(props)=>(
-              <button className="btn btn-info btn-sm" title="Editar Personas">
-              <i className="fas fa-pen"></i>
-            </button>        ),
+                <div>
+                <button className="btn btn-info btn-sm" title="Editar" style={{ marginRight: '5px' }}>
+                  <i className="fas fa-pen"></i>
+                </button>
+                <button className="btn btn-danger btn-sm" title="Eliminar" style={{ marginRight: '5px' }}>
+                  <i className="fas fa-trash"></i>
+                </button>
+              </div>        ),
             ignoreRowClick:true,
             allowOverflow:true,
             button:true

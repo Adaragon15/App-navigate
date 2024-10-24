@@ -6,36 +6,40 @@ import DataTable from 'react-data-table-component';
 import QRCode from "react-qr-code";
 
 
-const columnas=[
+const columnas = [
   {
-    name:'Identificador',
-    selector: row=> row.matricula
-    },
-    {
-        name:'Nombre',
-        selector: row=> row.nombre
-    },
-
-    {
-        name:'Tipo',
-        selector: row=> row.tipo
-    },        
-    {
-        name:'Ubicacion',
-        selector: row=> row.ubicacion
-    },
-    {
-      name:'Opciones',
-      selector: row=> row.action,
-      cell:(props)=>(
-        <button className="btn btn-info btn-sm" title="Editar Mob">
-        <i className="fas fa-pen"></i>
-      </button>        ),
-      ignoreRowClick:true,
-      allowOverflow:true,
-      button:true
-  }      
-]
+    name: 'Identificador',
+    selector: row => row.matricula
+  },
+  {
+    name: 'Nombre',
+    selector: row => row.nombre
+  },
+  {
+    name: 'Tipo',
+    selector: row => row.tipo
+  },
+  {
+    name: 'Ubicacion',
+    selector: row => row.ubicacion
+  },
+  {
+    name: 'Opciones',
+    cell: (props) => (
+      <div>
+        <button className="btn btn-info btn-sm" title="Editar" style={{ marginRight: '5px' }}>
+          <i className="fas fa-pen"></i>
+        </button>
+        <button className="btn btn-danger btn-sm" title="Eliminar" style={{ marginRight: '5px' }}>
+          <i className="fas fa-trash"></i>
+        </button>
+      </div>
+    ),
+    ignoreRowClick: true,
+    allowOverflow: true,
+    button: true
+  }
+];
 const data = [
   {
     id:1,
@@ -43,12 +47,6 @@ const data = [
     nombre:"Mesa",
     tipo:"Mesa de madera",
     ubicacion:"Edificio k4",
-    cell:(props)=>(
-      <button className="btn btn-info btn-sm" title="Editar Mob">
-        <i className="fas fa-pen"></i>
-      </button>
-    )
-
 },
 {
     id:2,
@@ -56,12 +54,6 @@ const data = [
     nombre:"Banco de herreria",
     tipo:"Fierro",
     ubicacion:"Edificio d5",
-    cell:(props)=>(
-      <button className="btn btn-info btn-sm" title="Editar Mob">
-        <i className="fas fa-pen"></i>
-      </button>
-    )
-
 }
   
 ]
@@ -138,6 +130,8 @@ const Mobiliario = ()=>{
                   <div className="card-body">
                   <DataTable columns={columnas} data={data}/>
                   </div>
+                  <div className="card-footer"><button className="btn btn-lg float-right btn-success" data-toggle="modal"
+                  data-target="#modal-default">+ Agregar Nuevo</button></div>
                 </div>
 
               </div>
@@ -153,7 +147,7 @@ const Mobiliario = ()=>{
       <div className="modal-dialog">
         <div className="modal-content">
           <div className="modal-header">
-              <h4 className="modal-title">Default Modal</h4>
+              <h4 className="modal-title">Codigo QR</h4>
               <button type="button" className="close" data-dismiss="modal" aria-label="Close">
                 <span aria-hidden="true">×</span>
               </button>

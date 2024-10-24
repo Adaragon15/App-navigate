@@ -67,6 +67,8 @@ const Personas = ()=>{
                   <div className="card-body">
                     <DTable />
                  </div>
+                 <div className="card-footer"><button className="btn btn-lg float-right btn-success" data-toggle="modal"
+                  data-target="#modal-default">+ Agregar Nuevo</button></div>
                 </div>
 
               </div>
