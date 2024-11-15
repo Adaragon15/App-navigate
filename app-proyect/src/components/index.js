@@ -1,7 +1,12 @@
-export * from '../components/commons/Footer';
-export * from '../components/commons/Main';
-export * from '../components/commons/Navbar';
-export * from '../components/commons/Title';
+//Layouts
+export * from './commons/Navbar';
+export * from './commons/aside/AsideBar';
+export * from './commons/breadcumbs/Breadcumbs';
+export * from './commons/footer/Footer';
+export * from './commons/Title';
+export * from './commons/Main';
+
+//datatable
 export * from './datatable/DTable';
 export * from './echarts/PieCharts';
 export * from './echarts/BarsCharts';

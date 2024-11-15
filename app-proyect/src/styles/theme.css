@@ -1,0 +1,281 @@
+/* Variables de tema claro */
+:root {
+    --primary: #1E88E5; /* azul brillante para botones principales, enlaces importantes y elementos interactivos*/
+    --on-primary: #FFFFFF; /*texto blanco que aparece sobre el color primario*/
+    --primary-container: #E3F2FD; /*fondo de contenedor claro complementan el color primario*/
+    --on-primary-container: #1E88E5; /*texto sobre contenedores del color primario*/
+    --secondary: #6C757D; /*elementos menos destacados que el primario como botones secundarios o texto de menor importancia*/
+    --on-secondary: #FFFFFF; /*Texto blanco sobre elementos secundarios*/
+    --secondary-container: #F1F1F1; /*fondo de contenedor claro para el color secundario*/
+    --on-secondary-container: #6C757D; /*texto sobre contenedores que complementan el color secundario*/
+    --tertiary: #FFCA28; /*amarillo para elementos de enfasis o notificaciones*/
+    --on-tertiary: #212121; /*texto oscuro sobre elementos terciarios*/
+    --tertiary-container: #FFF8E1; /*contenedor claro para el terciario*/
+    --on-tertiary-container: #FFCA28; /*texto sobre el contenedor terciario*/
+    --background: #F8F9FA; /*color de fondo principal de la aplicacion*/
+    --on-background: #212121; /*texto en el fondo claro.*/
+    --surface: #FFFFFF; /*fondos de tarjetas y superficies*/
+    --on-surface: #343A40; /*texto oscuro sobre superficies surface*/
+    --surface-variant: #EAEAEA; /*variante de superficie clara*/
+    --on-surface-variant: #212121; /*texto oscuro sobre variante de superficie*/
+    --outline: #CED4DA; /*bordes de elementos*/
+    --error: #FF6B6B; /*rojo para errores, advertencias*/
+    --on-error: #FFFFFF; /*texto blanco sobre error*/
+    --error-container: #F8D7DA; /*contenedor claro para errores*/
+    --on-error-container: #B71C1C; /*texto oscuro sobre contenedor de error*/
+    --shadow: rgba(0, 0, 0, 0.3); /*sombra general*/
+    --inverse-on-surface: #FFFFFF; /*inverso sobre superficie*/
+    --inverse-surface: #343A40; /*superficie inversa*/
+    --inverse-primary: #1E88E5; /*primario inverso*/
+    --backdrop: rgba(0, 0, 0, 0.5); /*fondo semi-transparente para diálogos*/
+}
+
+/* Variables de tema oscuro */
+.dark-mode {
+    --primary: #1E88E5; /*azul vibrante para botones y acentos (color primario)*/
+    --on-primary: #FFFFFF; /*texto blanco sobre el primario*/
+    --primary-container: #0D47A1; /*contenedor oscuro para el primario*/
+    --on-primary-container: #E3F2FD; /*texto claro sobre el contenedor primario*/
+    --secondary: #6C757D; /*gris para elementos secundarios*/
+    --on-secondary: #FFFFFF; /*texto blanco sobre el secundario*/
+    --secondary-container: #495057; /*contenedor oscuro para el secundario*/
+    --on-secondary-container: #F1F1F1; /*texto claro sobre el contenedor secundario*/
+    --tertiary: #FFCA28; /*amarillo brillante*/
+    --on-tertiary: #212121; /*texto oscuro sobre el terciario*/
+    --tertiary-container: #FF6F00; /*contenedor oscuro para el terciario*/
+    --on-tertiary-container: #FFF8E1; /*texto claro sobre el contenedor terciario*/
+    --background: #212529; /*fondo oscuro*/
+    --on-background: #E9ECEF; /*texto claro sobre el fondo*/
+    --surface: #343A40; /*superficies como tarjetas*/
+    --on-surface: #FFFFFF; /*texto blanco sobre superficies*/
+    --surface-variant: #495057; /*variante de superficie oscura*/
+    --on-surface-variant: #FFFFFF; /*texto blanco sobre variante de superficie*/
+    --outline: #495057; /*bordes de elementos oscuros*/
+    --error: #FF6B6B; /*rojo para errores*/
+    --on-error: #FFFFFF; /*texto blanco sobre error*/
+    --error-container: #F8D7DA; /*contenedor claro para errores*/
+    --on-error-container: #B71C1C; /*texto oscuro sobre contenedor de error*/
+    --shadow: rgba(255, 255, 255, 0.3); /*sombra general*/
+    --inverse-on-surface: #000000; /*inverso sobre superficie*/
+    --inverse-surface: #E9ECEF; /*superficie inversa*/
+    --inverse-primary: #1E88E5; /*primario inverso*/
+    --backdrop: rgba(255, 255, 255, 0.5); /*fondo semi-transparente para diálogos*/
+}
+
+/* Tema Claro */
+.light-mode .color-primary {
+    color: var(--primary) !important;  /*Azul brillante para botones principales, enlaces importantes y elementos interactivos*/
+}
+
+.light-mode .color-on-primary {
+    color: var(--on-primary) !important; /*texto blanco que aparece sobre el color primario*/
+}
+
+.light-mode .color-primary-container {
+    background-color: var(--primary-container) !important; /*fondo de contenedor claro complementan el color primario*/
+}
+
+.light-mode .color-on-primary-container {
+    color: var(--on-primary-container) !important; /*texto sobre contenedores del color primario*/
+}
+
+.light-mode .color-secondary {
+    color: var(--secondary) !important; /*elementos menos destacados que el primario como botones secundarios o texto de menor importancia*/
+}
+
+.light-mode .color-on-secondary {
+    color: var(--on-secondary) !important; /*Texto blanco sobre elementos secundarios*/
+}
+
+.light-mode .color-secondary-container {
+    background-color: var(--secondary-container) !important; /*fondo de contenedor claro para el color secundario*/
+}
+
+.light-mode .color-on-secondary-container {
+    color: var(--on-secondary-container) !important; /*texto sobre contenedores que complementan el color secundario*/
+}
+
+.light-mode .color-tertiary {
+    color: var(--tertiary) !important; /*amarillo para elementos de enfasis o notificaciones*/
+}
+
+.light-mode .color-on-tertiary {
+    color: var(--on-tertiary) !important; /*texto oscuro sobre elementos terciarios*/
+}
+
+.light-mode .color-tertiary-container {
+    background-color: var(--tertiary-container) !important; /*contenedor claro para el terciario*/
+}
+
+.light-mode .color-on-tertiary-container {
+    color: var(--on-tertiary-container) !important; /*texto sobre el contenedor terciario*/
+}
+
+.light-mode .color-background {
+    background-color: var(--background) !important; /*color de fondo principal de la aplicacion*/
+}
+
+.light-mode .color-on-background {
+    color: var(--on-background) !important; /*texto en el fondo claro.*/
+}
+
+.light-mode .color-surface {
+    background-color: var(--surface) !important; /*fondos de tarjetas y superficies*/
+}
+
+.light-mode .color-on-surface {
+    color: var(--on-surface) !important; /*texto oscuro sobre superficies surface*/
+}
+
+.light-mode .color-surface-variant {
+    background-color: var(--surface-variant) !important; /*variante de superficie clara*/
+}
+
+.light-mode .color-on-surface-variant {
+    color: var(--on-surface-variant) !important; /*texto oscuro sobre variante de superficie*/
+}
+
+.light-mode .color-outline {
+    border-color: var(--outline) !important; /*bordes de elementos*/
+}
+
+.light-mode .color-error {
+    color: var(--error) !important; /*rojo para errores, advertencias*/
+}
+
+.light-mode .color-on-error {
+    color: var(--on-error) !important; /*texto blanco sobre error*/
+}
+
+.light-mode .color-error-container {
+    background-color: var(--error-container) !important; /*contenedor claro para errores*/
+}
+
+.light-mode .color-on-error-container {
+    color: var(--on-error-container) !important; /*texto oscuro sobre contenedor de error*/
+}
+
+.light-mode .shadow {
+    box-shadow: var(--shadow) !important; /*sombra general*/
+}
+
+.light-mode .color-inverse-on-surface {
+    color: var(--inverse-on-surface) !important; /*inverso sobre superficie*/
+}
+
+.light-mode .color-inverse-surface {
+    background-color: var(--inverse-surface) !important; /*superficie inversa*/
+}
+
+.light-mode .color-inverse-primary {
+    color: var(--inverse-primary) !important; /*primario inverso*/
+}
+
+/* Tema Oscuro */
+.dark-mode .color-primary {
+    color: var(--primary) !important; /*azul vibrante para botones y acentos (color primario)*/
+}
+
+.dark-mode .color-on-primary {
+    color: var(--on-primary) !important; /*texto blanco sobre el primario*/
+}
+
+.dark-mode .color-primary-container {
+    background-color: var(--primary-container) !important; /*contenedor oscuro para el primario*/
+}
+
+.dark-mode .color-on-primary-container {
+    color: var(--on-primary-container) !important; /*texto claro sobre el contenedor primario*/
+}
+
+.dark-mode .color-secondary {
+    color: var(--secondary) !important; /*gris para elementos secundarios*/
+}
+
+.dark-mode .color-on-secondary {
+    color: var(--on-secondary) !important; /*texto blanco sobre el secundario*/
+}
+
+.dark-mode .color-secondary-container {
+    background-color: var(--secondary-container) !important; /*contenedor oscuro para el secundario*/
+}
+
+.dark-mode .color-on-secondary-container {
+    color: var(--on-secondary-container) !important; /*texto claro sobre el contenedor secundario*/
+}
+
+.dark-mode .color-tertiary {
+    color: var(--tertiary) !important; /*amarillo brillante*/
+}
+
+.dark-mode .color-on-tertiary {
+    color: var(--on-tertiary) !important; /*texto oscuro sobre el terciario*/
+}
+
+.dark-mode .color-tertiary-container {
+    background-color: var(--tertiary-container) !important; /*contenedor oscuro para el terciario*/
+}
+
+.dark-mode .color-on-tertiary-container {
+    color: var(--on-tertiary-container) !important; /*texto claro sobre el contenedor terciario*/
+}
+
+.dark-mode .color-background {
+    background-color: var(--background) !important; /*fondo oscuro*/
+}
+
+.dark-mode .color-on-background {
+    color: var(--on-background) !important; /*texto claro sobre el fondo*/
+}
+
+.dark-mode .color-surface {
+    background-color: var(--surface) !important; /*superficies como tarjetas*/
+}
+
+.dark-mode .color-on-surface {
+    color: var(--on-surface) !important; /*texto blanco sobre superficies*/
+}
+
+.dark-mode .color-surface-variant {
+    background-color: var(--surface-variant) !important; /*variante de superficie oscura*/
+}
+
+.dark-mode .color-on-surface-variant {
+    color: var(--on-surface-variant) !important; /*texto blanco sobre variante de superficie*/
+}
+
+.dark-mode .color-outline {
+    border-color: var(--outline) !important; /*bordes de elementos oscuros*/
+}
+
+.dark-mode .color-error {
+    color: var(--error) !important; /*rojo para errores*/
+}
+
+.dark-mode .color-on-error {
+    color: var(--on-error) !important; /*texto blanco sobre error*/
+}
+
+.dark-mode .color-error-container {
+    background-color: var(--error-container) !important; /*contenedor claro para errores*/
+}
+
+.dark-mode .color-on-error-container {
+    color: var(--on-error-container) !important; /*texto oscuro sobre contenedor de error*/
+}
+
+.dark-mode .shadow {
+    box-shadow: var(--shadow) !important; /*sombra general*/
+}
+
+.dark-mode .color-inverse-on-surface {
+    color: var(--inverse-on-surface) !important; /*inverso sobre superficie*/
+}
+
+.dark-mode .color-inverse-surface {
+    background-color: var(--inverse-surface) !important; /*superficie inversa*/
+}
+
+.dark-mode .color-inverse-primary {
+    color: var(--inverse-primary) !important; /*primario inverso*/
+}
